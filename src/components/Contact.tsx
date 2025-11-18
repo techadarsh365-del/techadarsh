@@ -26,6 +26,24 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Rate limiting: Check last submission time
+    const lastSubmission = localStorage.getItem('lastContactSubmission');
+    const now = Date.now();
+    const cooldownPeriod = 60000; // 60 seconds
+    
+    if (lastSubmission) {
+      const timeSinceLastSubmission = now - parseInt(lastSubmission);
+      if (timeSinceLastSubmission < cooldownPeriod) {
+        const remainingSeconds = Math.ceil((cooldownPeriod - timeSinceLastSubmission) / 1000);
+        toast({
+          title: "Please wait",
+          description: `You can submit another message in ${remainingSeconds} seconds. This helps prevent spam.`,
+          variant: "destructive",
+        });
+        return;
+      }
+    }
+    
     // Validate with zod schema
     const result = contactSchema.safeParse(formData);
     
@@ -56,6 +74,9 @@ const Contact = () => {
         title: "Message sent!",
         description: "Thank you for reaching out. I'll get back to you soon!",
       });
+      
+      // Store submission timestamp for rate limiting
+      localStorage.setItem('lastContactSubmission', Date.now().toString());
       
       // Reset form
       setFormData({ name: "", email: "", message: "" });

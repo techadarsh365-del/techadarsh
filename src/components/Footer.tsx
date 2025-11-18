@@ -18,14 +18,14 @@ const Footer = () => {
 
           <div className="flex gap-4">
             <a
-              href="mailto:techadarsh365@gmail.com"
+              href="mailto:techadarsh356@gmail.com"
               className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth"
               aria-label="Email"
             >
               <Mail className="w-4 h-4" />
             </a>
             <a
-              href="https://github.com/techadarsh365"
+              href="https://github.com/techadarsh365-del"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth"
@@ -34,7 +34,7 @@ const Footer = () => {
               <Github className="w-4 h-4" />
             </a>
             <a
-              href="https://linkedin.com/in/techadarsh365"
+              href="https://www.linkedin.com/in/techadarsh365/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth"

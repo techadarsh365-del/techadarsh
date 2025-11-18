@@ -49,14 +49,14 @@ const Hero = () => {
             
             <div className="flex gap-4 justify-center md:justify-start">
               <a
-                href="mailto:techadarsh365@gmail.com"
+                href="mailto:techadarsh356@gmail.com"
                 className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth"
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com/techadarsh365"
+                href="https://github.com/techadarsh365-del"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth"
@@ -65,7 +65,7 @@ const Hero = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/techadarsh365"
+                href="https://www.linkedin.com/in/techadarsh365/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth"

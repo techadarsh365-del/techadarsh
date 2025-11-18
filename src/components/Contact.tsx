@@ -60,7 +60,11 @@ const Contact = () => {
       // Reset form
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error('EmailJS error:', error);
+      // Only log errors in development
+      if (import.meta.env.DEV) {
+        console.error('EmailJS error:', error);
+      }
+      
       toast({
         title: "Error",
         description: "Failed to send message. Please try again later.",

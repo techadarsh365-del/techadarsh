@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, Linkedin, Mail, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Navigation = () => {
@@ -35,7 +35,7 @@ const Navigation = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -45,9 +45,40 @@ const Navigation = () => {
                 {link.label}
               </a>
             ))}
-            <Button size="sm" className="bg-gradient-primary hover:opacity-90 transition-smooth">
-              Get In Touch
-            </Button>
+            <div className="flex items-center gap-2 ml-2">
+              <a
+                href="mailto:techadarsh356@gmail.com"
+                className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth"
+                aria-label="Email"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
+              <a
+                href="tel:4376626854"
+                className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth"
+                aria-label="Phone"
+              >
+                <Phone className="w-4 h-4" />
+              </a>
+              <a
+                href="https://github.com/techadarsh365-del"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth"
+                aria-label="GitHub"
+              >
+                <Github className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/techadarsh365/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -77,13 +108,40 @@ const Navigation = () => {
                 {link.label}
               </a>
             ))}
-            <Button
-              size="sm"
-              className="w-full mt-4 bg-gradient-primary hover:opacity-90 transition-smooth"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Get In Touch
-            </Button>
+            <div className="flex justify-center gap-3 mt-4 pt-4 border-t border-border">
+              <a
+                href="mailto:techadarsh356@gmail.com"
+                className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth"
+                aria-label="Email"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
+              <a
+                href="tel:4376626854"
+                className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth"
+                aria-label="Phone"
+              >
+                <Phone className="w-4 h-4" />
+              </a>
+              <a
+                href="https://github.com/techadarsh365-del"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth"
+                aria-label="GitHub"
+              >
+                <Github className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/techadarsh365/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+            </div>
           </div>
         )}
       </div>
